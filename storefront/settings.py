@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'djoser',
-    'playground',
     'debug_toolbar',
     'store',
     'tags',
@@ -96,7 +95,7 @@ DATABASES = {
         'NAME': 'storefront2',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': 'MyPassword'
+        'PASSWORD': 'Daviddimples1'
     }
 }
 
