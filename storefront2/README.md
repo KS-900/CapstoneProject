@@ -1,67 +1,48 @@
-Store Back-End Project Documentation(Capstone Part 2)
+BE Capstone Project: e-commerce store API 
 
+e-commerce store API using Django REST Framework.
 
-Project Overview
+The API will allow users to manage their orders and carts by creating, updating and deleting their orders and tasks.
 
+The API will allow admins the ability to add products, customers, collections 
 
-This project is a back-end system for an online store, designed with two apps:
+Register and log in -Endpoints
+Registering
+endpoint-auth/users/
+"id": 2,
+    "username": "abo_nkunku",
+    "password": "ILoveDjango"
+    "email": "kb1.satekge@gmail.com",
+    "first_name": "Abo",
+    "last_name": "nkunku"
 
+LoginIn
+auth/jwt/create
+"username": "abo_nkunku",
+    "password": "ILoveDjango"
+    "email": "kb1.satekge@gmail.com",
 
-1. stor - Manages products, collections, customers, carts, and orders.
-
-2. Tag - Manages product tagging with a tagging system.
-3. core - Managers the users
-
-
-
-
-
-
-
-
-1. Features of the Project
-
-
-store App
-
-
-Products: Create, update, delete, and list products.
-
-
-Collections: Organize products into categories.
-
-
-Customers: Manage customer information.
-
-
-Cart: add/remove products before checkout.
-
-
-Orders: Track customer purchases and order history.
-
-
-
-
-Tag App
-
-
-Tags: Labels that can be assigned to products.
-
-
-TaggedItems: Links between tags and products.
-
-
-
-
+then move to ModHeader 
+use Authorization and JWT [Token]
 
 
 2. API Endpoints
 API Root
 store/
+{
+    "products": "http://127.0.0.1:8000/store/products/",
+    "collections": "http://127.0.0.1:8000/store/collections/",
+    "carts": "http://127.0.0.1:8000/store/carts/",
+    "customers": "http://127.0.0.1:8000/store/customers/",
+    "orders": "http://127.0.0.1:8000/store/orders/"
+}
 Product list
 store/products/
+[List of all products]
+
 Product ID(DELETE,UPDATE)
 store/products/<id>
+[Will show product matching ID]
 
 [SAME APPLIES TO
 CUSTOMER
@@ -75,11 +56,11 @@ we use the superuser
 endpoint
 admin/
 
-auth/jwt/create
-superuser
-admin
-kb2.satekge@gmail.com
-123123
+
+username: admin
+email: kb2.satekge@gmail.com
+Password: 123123
+
 3. Technology Stack
 
 
@@ -88,22 +69,5 @@ Back-End: Django (Django Rest Framework)
 
 Database: MySQL
 
-
-Tools: draw.io for ERD
-
-
-
-
-6. ERD image
-	[Store ERD]
-
-[Tags ERD]
-
-7. Relationships
-Tag will have a many to one relationship with TaggedItem.
-Product and cart will have a many to many relationship and uses cartItem to function efficiently.
-Collection will have a many to one relationship with products.
-Collection will have a many to one relationship with customers.
-Customers have a one to many relationship with orders.
-Product and order will need OrderItem to function efficiently.
-
+https://chromewebstore.google.com/detail/modheader-modify-http-hea/idgpnmonknjnojddfkpgkljpfnnfcklj 
+# CapstoneFinal
